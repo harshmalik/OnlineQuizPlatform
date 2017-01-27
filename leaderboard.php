@@ -6,7 +6,7 @@ $con=connect();
 
 ?>
 <!doctype html>
- 
+
 
 <html lang="en">
   <head>
@@ -22,7 +22,7 @@ $con=connect();
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/material.css">
     <link rel="stylesheet" href="css/styles.css">
-     
+
   </head>
   <body>
     <div class="mdl-layout mdl-js-layout  mdl-layout--fixed-drawer mdl-layout--fixed-header">
@@ -37,25 +37,25 @@ $con=connect();
                     <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
                        <!-- <i class="material-icons">search</i> -->
                     </label>
-                   
+
                   </div>
                   <!-- Navigation -->
                   <div class="android-navigation-container">
                     <nav class="android-navigation mdl-navigation">
-                      <a class="mdl-navigation__link mdl-typography--text-uppercase" href="http://cryptex.csidtu.co.in/index.php">Home</a>
+                      <a class="mdl-navigation__link mdl-typography--text-uppercase" href="http://cryptex2017.ml/index.php">Home</a>
                       <a class="mdl-navigation__link mdl-typography--text-uppercase" target="_blank" href="https://www.facebook.com/phoenix.cryptex/app/202980683107053/">Forum</a>
 
-                     
+
                     </nav>
                   </div>
                   <span class="android-mobile-title mdl-layout-title">
                     <img class="android-logo-image" src="images/cryptex-small.png">
                   </span>
-                           
+
                 </div>
               </div>
 
-     <?php 
+     <?php
   require('sider2.php');
 ?>
 
@@ -88,11 +88,11 @@ $con=connect();
                           <th>Level</th>
                           <th>Lifelines-Left</th>
                         </tr>
-                          <?php 
+                          <?php
                           $i=1;
                           //4th message
                           $sql_query2="Select fb_id , level,username,levelskip,firstlast,anslen,profilepic from register   order by level  desc , registertime asc";
-                          
+
                         //   echo $sql_query2;
                           $r2=mysql_query($sql_query2);
                           while($row2=mysql_fetch_array($r2))
@@ -102,16 +102,16 @@ $con=connect();
                           <tr>
                             <td><center><?php echo $i++.'        '; ?></center></td>
                                                         <td><img src="
-          <?php 
+          <?php
 
-          
+
           echo $row2["profilepic"];
-          
+
           ?>" class="demo-avatar"><center></td>
                             <td><center><?php echo $row2['username'].'        '; ?></center></td>
                             <td><center><?php echo $row2['level'].'        ';?> </center></td>
-                            
-                            <td><center><?php 
+
+                            <td><center><?php
 
 
                             $value =0;
@@ -125,7 +125,7 @@ $con=connect();
 
                             if($row2['anslen']==-1){
                               $value++;
-                            }                            
+                            }
 
                             echo $value ;
 
@@ -138,17 +138,17 @@ $con=connect();
 
               </div>
         </div>
-     
 
 
-       <?php 
+
+       <?php
 
     require("footer.php");
- 
+
  ?>
-    
-        
-    
+
+
+
     <script src="js/material.js"></script>
   </body>
 </html>

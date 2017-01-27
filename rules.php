@@ -4,7 +4,7 @@ require("functions.php");
 error_reporting(0);
 ?>
 <!doctype html>
- 
+
 
 <html lang="en">
   <head>
@@ -20,7 +20,7 @@ error_reporting(0);
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/material.css">
     <link rel="stylesheet" href="css/styles.css">
-     
+
   </head>
   <body>
     <div class="mdl-layout mdl-js-layout  mdl-layout--fixed-drawer mdl-layout--fixed-header">
@@ -43,19 +43,19 @@ error_reporting(0);
           <!-- Navigation -->
           <div class="android-navigation-container">
             <nav class="android-navigation mdl-navigation">
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="http://cryptex.csidtu.co.in/index.php">Home</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="http://cryptex2017.ml/index.php">Home</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" target="_blank" href="https://www.facebook.com/phoenix.cryptex/app/202980683107053/">Forum</a>
 
-             
+
             </nav>
           </div>
           <span class="android-mobile-title mdl-layout-title">
             <img class="android-logo-image" src="images/cryptex-small.png">
           </span>
-           
+
         </div>
       </div>
-<?php 
+<?php
   require('sider2.php');
 ?>
 
@@ -63,8 +63,8 @@ error_reporting(0);
       <div class="android-content mdl-layout__content">
         <a name="top"></a>
         <div class="mdl-grid">
-        
-            
+
+
               <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--10-col mdl-cell--1-offset-desktop mdl-cell--1-offset-tablet">
                     <div class="mdl-card__title">
                       <!-- <h2 class="mdl-card__title-text">Welcome</h2> -->
@@ -82,7 +82,7 @@ error_reporting(0);
                       </a> -->
                     </div>
 
-                  <!-- 
+                  <!--
                     <img src="images/more-from-3.png" alt="">
                     <img src="images/more-from-4.png" alt="">
                     <img src="images/nexus6-on.jpg" alt=""> -->
@@ -91,12 +91,12 @@ error_reporting(0);
           <br/>
           <center><font color = "red" size = "180%"> Rules </font></center>
           </br></br>
-          
+
           <p style = "margin-left:20px;"> The game consists of <span id = "num">32+</span>
-          levels in total. Each level presents you with a “code” and a set of clues. 
-          You need to crack that code using those clues to get to the next level. 
-          The hints,if present, may or may not be hidden at any level. Look for them in url, 
-          page title, page source, image etc. All you need is your common sense coupled with 
+          levels in total. Each level presents you with a “code” and a set of clues.
+          You need to crack that code using those clues to get to the next level.
+          The hints,if present, may or may not be hidden at any level. Look for them in url,
+          page title, page source, image etc. All you need is your common sense coupled with
           observation and understanding skills.</br></br>
           The hints may deceive if looked alone but collectively they will point to a definite answer.</br></br>
           You have no limit to the number of attempts for answering a particular level. Try out each and every possibility you can think of to get to the next level.</br></br>
@@ -109,9 +109,9 @@ error_reporting(0);
           Note that each lifeline can be used ONLY ONCE...so use wisely..!</br>
 
           Hints will be available in the <u>
-          <a href="https://www.facebook.com/phoenix.cryptex/app_202980683107053" target="_blank">Discussion Forum</a></u> 
-          on a timely basis from the mods. <br>Users can also post the hints for others to keep the game 
-          going but anyone disclosing the answer will be <font color = "red">disqualified</font> 
+          <a href="https://www.facebook.com/phoenix.cryptex/app_202980683107053" target="_blank">Discussion Forum</a></u>
+          on a timely basis from the mods. <br>Users can also post the hints for others to keep the game
+          going but anyone disclosing the answer will be <font color = "red">disqualified</font>
           from the game.
           </p>
           </br></br>
@@ -130,7 +130,7 @@ error_reporting(0);
                               <input class="mdl-textfield__input" type="text" id="sample3">
                               <label class="mdl-textfield__label" for="sample3">Text...</label>
                             </div>
-                            
+
                             <button class="btn waves-effect waves-light" type="submit" name="action">Submit
                             <i class="material-icons right">send</i>
                             </button>
@@ -139,17 +139,17 @@ error_reporting(0);
                     </div>
                 </div> -->
 
-             
+
          </div>
 
-<?php 
+<?php
 
     require("footer.php");
- 
+
  ?>
       </div>
     </div>
-    
+
     <script src="js/material.js"></script>
   </body>
 </html>

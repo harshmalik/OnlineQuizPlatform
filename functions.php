@@ -164,7 +164,7 @@ function scheckaccesstoken(){
 	if(!(file_get_contents($graph_url))){
 		session_destroy();
 
-		header('Location: '."http://localhost/downloadedcryptexsite/vide/examples/fb.php");
+		header('Location: '."https://cryptex2017.ml/vide/examples/fb.php");
 
 		};
 	     // echo $user->picture->data->url;
@@ -424,7 +424,7 @@ mysqli_query($link,$sql_query);
 }
 function connect()
 {
-	$link = mysqli_connect("localhost", "root", "", "cryptex16");
+	$link = mysqli_connect("localhost", "root", "cryptex17", "cryptex17");
 	if($link === false){
 	    die("ERROR: Could not connect. " . mysqli_connect_error());
 	}

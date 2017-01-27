@@ -56,7 +56,7 @@
         if(response.status==='connected')
         { console.log('i am after login connected');
              console.log(JSON.stringify(response));
-           window.location.href = "http://localhost/downloadedcryptexsite/index.php";
+           window.location.href = "http://cryptex2017.ml/index.php";
           }
         else
           {//console.log('i am not connected');
@@ -94,7 +94,7 @@
        if(response.status==='connected')
         { //console.log('i am connected');
 
-           window.location.href = "http://localhost/downloadedcryptexsite/index.php";
+           window.location.href = "http://cryptex2017.ml/index.php";
 
         }
         else

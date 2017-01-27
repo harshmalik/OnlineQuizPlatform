@@ -5,7 +5,7 @@ error_reporting(0);
 require("functions.php");
 
 if (!isset($_SESSION["email"])) {
-  header('Location: http://cryptex.csidtu.co.in/vide/examples/fb.php ');
+  header('Location: http://cryptex2017.ml/vide/examples/fb.php ');
 }
 else{
   scheckaccesstoken();
@@ -51,7 +51,7 @@ if (!isset($_SESSION["email"])) {
           <!-- Navigation -->
           <div class="android-navigation-container">
             <nav class="android-navigation mdl-navigation">
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="http://cryptex.csidtu.co.in/index.php">Home</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="https://cryptex2017.ml/index.php">Home</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" target="_blank" href="https://www.facebook.com/phoenix.cryptex/app/202980683107053/">Forum</a>
 
             </nav>
@@ -117,7 +117,7 @@ if (!isset($_SESSION["email"])) {
                                <h5 style="text-align: center;">Kushagra Jain</h5>
                               <h5 style="text-align: center;">Sachin Kadyan</h5>
                               <h5 style="text-align: center;">Shubham Jana</h5>
-                              
+
                           </div>
 
 

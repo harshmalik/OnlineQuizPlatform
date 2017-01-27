@@ -4,7 +4,7 @@ require_once("core.php");
 require("functions.php");
 
 if (!isset($_SESSION["access_token"])) {
-  header('Location: http://localhost/downloadedcryptexsite/vide/examples/fb.php ');
+  header('Location: http://cryptex2017.ml/vide/examples/fb.php ');
 }
 
 

@@ -1,5 +1,4 @@
 <?php
-print_r("TESTING FBPHP");
 session_start();
 error_reporting(0);
 include  dirname(dirname(dirname(__FILE__))).'/functions.php' ;
@@ -10,8 +9,8 @@ include  dirname(dirname(dirname(__FILE__))).'/fbapi.php' ;
 <html>
 <head lang="en">
   <meta charset="UTF-8">
-  <title>Cryptex16</title>
-    <style>
+  <title>Cryptex'17</title>
+  <!--  <style>
       html, body {
         margin: 0;
         width: 100%;
@@ -38,7 +37,12 @@ include  dirname(dirname(dirname(__FILE__))).'/fbapi.php' ;
 
 
 
-    </style>
+    </style>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+
+        <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body data-vide-bg="video/ocean">
 </div>
@@ -55,31 +59,68 @@ include  dirname(dirname(dirname(__FILE__))).'/fbapi.php' ;
      //   instance.destroy(); // Destroy instance
      // });
     </script>
-   </div>
+
 
   <?php
 session_start();
 include  dirname(dirname(dirname(__FILE__))).'/fbcode.php' ;
 
 ?>
+<svg viewBox="0 0 800 600">
+ <symbol id="s-text">
+   <text text-anchor="middle"
+         x="50%"
+         y="25%"
+         class="text--line"
+         >
+     CRYPTEX
+   </text>
+   <text text-anchor="middle"
+         x="50%"
+         y="68%"
+         class="text--line2"
+         >
+     2017
+   </text>
 
-  <center>
+ </symbol>
 
-    <div class="positioning">
+ <g class="g-ants">
+   <use xlink:href="#s-text"
+     class="text-copy"></use>
+   <use xlink:href="#s-text"
+     class="text-copy"></use>
+   <use xlink:href="#s-text"
+     class="text-copy"></use>
+   <use xlink:href="#s-text"
+     class="text-copy"></use>
+   <use xlink:href="#s-text"
+     class="text-copy"></use>
+ </g>
+
+
+</svg>
+
+
+
+    <!--<div class="positioning">
       <img src="cryptex.png" class="responsive-img" >
     </div>
+-->
 
-  </center>
+
   <center>
+<br />
   <div class="fb-login-button" scope="public_profile,email,user_friends"
   onlogin="checkLoginState();" data-size="large" data-show-faces="false"
-  data-auto-logout-link="true" > LOGIN </div>
+  data-auto-logout-link="true" value="LOGIN"></div>
   </center>
-
+</div>
 
 
   <!-- <div id='status'></div>
    -->
+
   </body>
 </html>
 
@@ -89,9 +130,8 @@ include  dirname(dirname(dirname(__FILE__))).'/fbcode.php' ;
     {
 
     //  header('Location: http://www.google.com');
-
 //add_user();
-      header('Location: http://localhost/downloadedcryptexsite/index.php');
+      header('Location: http://cryptex2017.ml/index.php');
 
 
      }
