@@ -1,9 +1,22 @@
 <?php
-include("functions.php");
+require_once("core.php");
+require_once("functions.php");
 
-error_reporting(0);
-$con=connect();
 
+if (!isset($_SESSION["access_token"])) {
+
+  header('Location: http://cryptex2017.ml/vide/examples/fb.php');
+}
+
+
+if (!isset($_SESSION["email"])) {
+  add_user();
+}
+
+
+
+$link=connect();
+$i=1;
 ?>
 <!doctype html>
 
@@ -42,7 +55,7 @@ $con=connect();
                   <!-- Navigation -->
                   <div class="android-navigation-container">
                     <nav class="android-navigation mdl-navigation">
-                      <a class="mdl-navigation__link mdl-typography--text-uppercase" href="http://cryptex2017.ml/index.php">Home</a>
+                      <a class="mdl-navigation__link mdl-typography--text-uppercase" href="http://cryptex.csidtu.co.in/index.php">Home</a>
                       <a class="mdl-navigation__link mdl-typography--text-uppercase" target="_blank" href="https://www.facebook.com/phoenix.cryptex/app/202980683107053/">Forum</a>
 
 
@@ -88,67 +101,57 @@ $con=connect();
                           <th>Level</th>
                           <th>Lifelines-Left</th>
                         </tr>
-                          <?php
-                          $i=1;
-                          //4th message
-                          $sql_query2="Select fb_id , level,username,levelskip,firstlast,anslen,profilepic from register   order by level  desc , registertime asc";
+                        <?php $sql_query2="Select fb_id , level,username,levelskip,firstlast,anslen,profilepic from register   order by level  desc , registertime asc";
 
-                        //   echo $sql_query2;
-                          $r2=mysql_query($sql_query2);
-                          while($row2=mysql_fetch_array($r2))
-                            {
-                              if($row2['level']==60) continue;
-                          ?>
-                          <tr>
-                            <td><center><?php echo $i++.'        '; ?></center></td>
-                                                        <td><img src="
-          <?php
-
-
-          echo $row2["profilepic"];
-
-          ?>" class="demo-avatar"><center></td>
-                            <td><center><?php echo $row2['username'].'        '; ?></center></td>
-                            <td><center><?php echo $row2['level'].'        ';?> </center></td>
-
-                            <td><center><?php
+                         //echo $sql_query2;
+                         $r2=mysqli_query($link,$sql_query2);
+                         //print_r($r2);
+                         //$row2=mysqli_fetch_array($r2,MYSQLI_BOTH);
+                        // print_r($row2);
+                         while($row2=mysqli_fetch_row($r2))
+                         {
+                           if($row2['1']==60) continue;
+                           ?>
+                           <tr>
+                             <td><center><?php echo $i++.'        '; ?></center></td>
+                                                         <td><img src="
+           <?php
 
 
-                            $value =0;
-                            if($row2['levelskip']==-1){
-                              $value++;
-                            }
+           echo $row2["6"];
 
-                            if($row2['firstlast']==-1){
-                              $value++;
-                            }
+           ?>" class="demo-avatar"><center></td>
+                             <td><center><?php echo $row2['2'].'        '; ?></center></td>
+                             <td><center><?php echo $row2['1'].'        ';?> </center></td>
 
-                            if($row2['anslen']==-1){
-                              $value++;
-                            }
-
-                            echo $value ;
-
-                             ?></center></td>
-
-                          </tr><?php } ?>
-                                                 </table>
-
-                    </p>
-
-              </div>
-        </div>
+                             <td><center><?php
 
 
+                             $value =0;
+                             if($row2['3']==-1){
+                               $value++;
+                             }
+
+                             if($row2['4']==-1){
+                               $value++;
+                             }
+
+                             if($row2['5']==-1){
+                               $value++;
+                             }
+
+                             echo $value ;
+
+                              ?></center></td>
+
+                           </tr><?php } ?>
+                                                  </table>
 
        <?php
 
     require("footer.php");
 
  ?>
-
-
-
     <script src="js/material.js"></script>
-  </body>
-</html>
+                          </body>
+                        </html>

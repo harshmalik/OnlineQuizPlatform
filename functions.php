@@ -24,7 +24,8 @@ function firstlast(){
 		$re=mysqli_query($link,$sqls);
 		$rows=mysqli_fetch_array($re,MYSQLI_BOTH);
 		$returna = $rows["firstlast"];
-$sql="UPDATE register SET  firstlast = '".$q."' WHERE `fb_id` = '".$_SESSION["fb_id"]."'";		$result  = mysql_query($sql);
+$sql="UPDATE register SET  firstlast = '".$q."' WHERE `fb_id` = '".$_SESSION["fb_id"]."'";
+$result  = mysqli_query($link,$sql);
 		if(mysqli_query($link, $sql)){
 		// print_r( $row);
 		}
@@ -59,7 +60,7 @@ function anslen(){
 
 
 		$sql_query="UPDATE register SET  anslen = '".$q."' WHERE `fb_id` = '".$_SESSION["fb_id"]."'";
-		$result  = mysql_query($sql_query);
+		$result  = mysqli_query($link,$sql_query);
 		return $returna;
 
 }
@@ -85,7 +86,7 @@ function levelskip(){
 		$q=$row["level"];
 		$w=$q+1;
 		$sql="UPDATE `register` SET `level` = '".$w."' , `levelskip` = '".$q."' WHERE `fb_id` = '".$_SESSION["fb_id"]."'";
-		$result  = mysql_query($sql);
+		$result  = mysqli_query($link,$sql);
 		if(mysqli_query($link, $sql)){
 		// print_r( $row);
 		}
@@ -132,7 +133,7 @@ function getQuestionData($level){
 $r=mysqli_query($link, $sql_query);
 if(mysqli_query($link, $sql_query)){
 // print_r( $row);
-echo "Successful";
+//echo "Successful";
 }
 else{
  echo "ERROR: Could not able to execute $sql_query. " . mysqli_error($link);
@@ -233,7 +234,7 @@ if (!preg_match("/^[0-9]{8,10}/i", $phone))
 
 		$sql_query="SELECT username FROM register";
 
-		$r=mysql_query($sql_query);
+		$r=mysqli_query($con,$sql_query);
 
 		echo "<select name='user'> ";
 
@@ -400,12 +401,12 @@ $graph_url = "https://graph.facebook.com/me?fields=email&access_token=".$_SESSIO
 
 function updateUser($id){
 	$link=connect();
-echo "string";
+//echo "string";
 
 $sql_query="select level from register where fb_id='".$id."';";
 $result  = mysqli_query($link,$sql_query);
 if($result){
- print_r("successfully executed");
+// print_r("successfully executed");
 }
 else{
  echo "ERROR: Could not able to execute $sql_query. " . mysqli_error($link);
@@ -426,7 +427,7 @@ function connect()
 {
 	$link = mysqli_connect("localhost", "root", "cryptex17", "cryptex17");
 	if($link === false){
-	    die("ERROR: Could not connect. " . mysqli_connect_error());
+	    die("ERRROR: Could not connect. " . mysqli_connect_error());
 	}
 return $link;
 }
@@ -457,10 +458,12 @@ $fb_id = $user->id;
 		$_SESSION["pic"] = $user->picture->data->url;
 		 $profilepic = $user->picture->data->url;
 	$sql="select COUNT(*) from register where fb_id='$fb_id'";
-//	echo $sql;
+	//echo $sql;
 $result  = mysqli_query($link,$sql);
-if(mysqli_query($link, $sql)){
- print_r("successfully executed");
+//print_r($result);
+if($result!=0){
+	//return 1;
+ //print_r("successfully executed");
 }
 else{
  echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
@@ -468,17 +471,28 @@ else{
 }
 //$resultcount=mysqli_num_rows($result);
 //$resultcount=1;
-print_r($result);
+//print_r($result);
+$sql_query="insert into register (username,fb_id,email,profilepic)
+values ('$username','$fb_id','$email','$profilepic')";
+$state = mysqli_query($link,$sql_query);
+if($state){
+//print_r("successfully executed");
+}
+else{
+//echo "ERROR: Could not able to execute $sql_query. " . mysqli_error($link);
+
+}
+
  if($result==0)
 {
 	$sql_query="insert into register (username,fb_id,email,profilepic)
  values ('$username','$fb_id','$email','$profilepic')";
- $state = mysqli_query($sql_query);
- if(mysqli_query($link, $sql_query)){
- 	print_r("successfully executed");
+ $state = mysqli_query($link,$sql_query);
+ if($state){
+ 	//print_r("successfully executed");
  }
  else{
- 	echo "ERROR: Could not able to execute $sql_query. " . mysqli_error($link);
+ //	echo "ERROR: Could not able to execute $sql_query. " . mysqli_error($link);
 
  }
 return  $state;
@@ -702,18 +716,18 @@ $link=connect();
 $sql="SELECT level FROM register WHERE fb_id=$fb_id";
 //$result = mysqli_query($link, $sql)
 if(mysqli_query($link, $sql)){
-    echo "Executed Successfully";
+  //  echo "Executed Successfully";
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 }
 
-//echo $result;
+//echo $sql;
 	//$sql_query="SELECT level FROM register WHERE fb_id='".$fb_id."'";
 $r=mysqli_query($link,$sql);
 
 $level=0;
 $row=mysqli_fetch_array($r,MYSQLI_BOTH);
-print_r($row);
+//print_r($row);
 /*while($row=mysqli_fetch_array($r,MYSQLI_BOTH))
 
 {
@@ -723,8 +737,8 @@ $level=$row['level'];
 }*/
 //echo $level;
 $resultLevel=$row['level'];
-print_r("THE LEVEl iS:");
-print_r($resultLevel);
+//print_r("THE LEVEl iS:");
+//print_r($resultLevel);
 
 return $resultLevel;
 
@@ -778,7 +792,7 @@ $sql_query=" select ansid from answers where ansid='".$level."' and ans='".$ans.
 $r=mysqli_query($link,$sql_query);
 
 if(mysqli_query($link, $sql_query)){
-    echo "successful";
+    //echo "successful";
 } else{
     echo "ERROR: Could not able to execute $sql_query. " . mysqli_error($link);
 }
@@ -968,12 +982,5 @@ return $exp;
 
 }
 
-function currentpage() {
-
-
-
- return substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
-
-}
 
 ?>

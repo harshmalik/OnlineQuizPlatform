@@ -4,7 +4,7 @@
                           <div class="mdl-mega-footer--left-section">
                                <div class="mdl-typography--font-light">CRYPTEX 2017</div>
                                 <div class="mdl-typography--font-light">Copyright © 2017 CSI DTU</div>
-                                 <div class="mdl-typography--font-light">Made by CSI Web Development Team</div>
+                                 <div class="mdl-typography--font-light" ><a href="webteam.php">CSI Web Development Team</a></div>
 
 
                           </div>

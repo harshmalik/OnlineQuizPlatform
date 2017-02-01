@@ -9,8 +9,8 @@ if (!isset($_SESSION["access_token"])) {
   header('Location: http://cryptex2017.ml/vide/examples/fb.php');
 }
 
-if (!isset($_SESSION["email"])) {
-  add_user();
+if (!isset($_SESSION["email"])){
+ add_user();
 
 }
 //add_user();
@@ -74,19 +74,20 @@ if (!isset($_SESSION["email"])) {
 ?>
 
 <script>
-window.alert('Wassup');
 'use strict';
 
     $("#ls").click(function() {
       alert("You have clicked Levelskip Lifeline ");
         var levelname = "levelskip";
+
         $.post( "zqlifeline.php", { name: levelname } ,
 
            function( data ) {
               var c = '"-1"';
               data=JSON.stringify(data);
+
                 if(data === c  ){
-                    $.post( "zqgetlifeline.php", { name: levelname } ,
+                    $.post( "../zqgetlifeline.php", { name: levelname } ,
                     function( data ) {
                       console.log(data);
                         //  $("#reshu").html=data;
@@ -111,6 +112,7 @@ window.alert('Wassup');
             }
 
          );
+
     });
 
   $("#fl").click(function() {
@@ -162,6 +164,7 @@ window.alert('Wassup');
                     $.post( "zqgetlifeline.php", { name: levelname } ,
                     function( data ) {
                       var stringq = "Answer Length Lifeline: The length of your string is ";
+                      console.log(data);
                       stringq = stringq.concat(data);
                       $("#reshu").text(stringq);
                     }
@@ -187,14 +190,15 @@ window.alert('Wassup');
 
 //print_r("WOWOWOWOWOWOW");
 session_start();
+add_user();
 require_once("functions.php");
     $level=getlevel($_SESSION["fb_id"]);
-print_r("THE LEVEL IS:");
-    print_r($level);
+//print_r("THE LEVEL IS:");
+    //print_r($level);
     $questionData=getQuestionData($level);
 
     $row=mysqli_fetch_array($questionData,MYSQLI_BOTH);
-print_r($row);
+//print_r($row);
 
 
 ?>

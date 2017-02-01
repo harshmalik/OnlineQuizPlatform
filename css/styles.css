@@ -738,7 +738,7 @@ _:-ms-input-placeholder, :root .demo-graph {
 .demo-card-image2.mdl-card {
   width: 280px;
   height: 280px;
-  background: url('../images/aryan.gif') center / cover;
+  background: url('images/aryan.gif') center / cover;
 }
 .demo-card-image2 > .mdl-card__actions {
   height: 52px;
@@ -753,7 +753,7 @@ _:-ms-input-placeholder, :root .demo-graph {
 .demo-card-image3.mdl-card {
   width: 280px;
   height: 280px;
-  background: url('../images/aryan.gif') ;
+  background: url('images/aryan.gif') ;
 }
 
 .demo-card-image3 > .mdl-card__actions {
@@ -812,7 +812,7 @@ video.responsive-video {
   content: "\e858";
 }
 .demo-layout-transparent {
-  background: url('../images/slide01.jpg') center / cover;
+  background: url('images/slide01.jpg') center / cover;
 }
 .demo-layout-transparent .mdl-layout__header,
 .demo-layout-transparent .mdl-layout__drawer-button {

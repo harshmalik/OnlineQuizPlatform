@@ -8,7 +8,7 @@ if (!isset($_SESSION["email"])) {
   header('Location: http://cryptex2017.ml/vide/examples/fb.php ');
 }
 else{
-  scheckaccesstoken();
+  //scheckaccesstoken();
 }
 
 if (!isset($_SESSION["email"])) {
@@ -67,21 +67,6 @@ if (!isset($_SESSION["email"])) {
   require('sider2.php');
 ?>
 
-                 <?php
-
-
-                          session_start();
-                          require_once("functions.php");
-
-                              $level=getlevel($_SESSION["fb_id"]);
-
-                              $questionData=getQuestionData($level);
-
-                              $row=mysql_fetch_array($questionData);
-
-
-
-                          ?>
 
            <div class="android-content mdl-layout__content">
                   <a name="top"></a>
@@ -92,9 +77,9 @@ if (!isset($_SESSION["email"])) {
                           </div>
 
 
-                    <div class="mdl-cell mdl-cell--11-col mdl-cell--12-col-phone mdl-cell--1-offset-desktop mdl-cell--1-offset-tablet">
+                    <div class="mdl-cell mdl-cell--11-col mdl-cell--12-col-phone mdl-cell--1-offset-desktop mdl-cell--1-offset-table">
 
-                              <div class="demo-card-image1 mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--10-col-phone">
+                              <div class="demo-card-image1 mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col mdl-cell--10-col-phone">
                                 <div class="mdl-card__title mdl-card--expand"></div>
                                 <div class="mdl-card__actions">
                                   <span class="demo-card-image__filename">Harsh Kumar</span>
@@ -102,13 +87,7 @@ if (!isset($_SESSION["email"])) {
                               </div>
 
 
-                              <div class="demo-card-image2 mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--10-col-phone">
-                                <div class="mdl-card__title mdl-card--expand"></div>
-                                <div class="mdl-card__actions">
-                                  <span class="demo-card-image__filename">Aryan Raj</span>
-                                </div>
-                              </div>
-                          </div>
+                            </div>
                       </div>
 
 

@@ -40,6 +40,7 @@ include  dirname(dirname(dirname(__FILE__))).'/fbapi.php' ;
     </style>-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
         <link rel="stylesheet" href="css/style.css">
 
@@ -47,18 +48,9 @@ include  dirname(dirname(dirname(__FILE__))).'/fbapi.php' ;
 <body data-vide-bg="video/ocean">
 </div>
    <div style="height:90%;">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../libs/jquery/dist/jquery.min.js"><\/script>')</script>
-    <script src="../src/jquery.vide.js">     </script>
-    <script>
-     // $(document).ready(function () {
-     //   $(document.body).vide('video/ocean'); // Non declarative initialization
-     //
-     //   var instance = $(document.body).data('vide'); // Get the instance
-     //   var video = instance.getVideoObject(); // Get the video object
-     //   instance.destroy(); // Destroy instance
-     // });
-    </script>
+  <!--  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+    <script>window.jQuery || document.write('<script src="../dist/jquery.min.js"><\/script>')</script>
+    <script src="../src/jquery.vide.js"></script>
 
 
   <?php
