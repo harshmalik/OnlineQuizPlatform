@@ -69,7 +69,7 @@ $i=1;
               </div>
 
      <?php
-  require('sider2.php');
+  require('siderleader.php');
 ?>
 
       <div class="android-content mdl-layout__content">
@@ -102,6 +102,7 @@ $i=1;
                           <th>Lifelines-Left</th>
                         </tr>
                         <?php $sql_query2="Select fb_id , level,username,levelskip,firstlast,anslen,profilepic from register   order by level  desc , registertime asc";
+                      //  $_SESSION['varname'] = '12';
 
                          //echo $sql_query2;
                          $r2=mysqli_query($link,$sql_query2);
@@ -116,6 +117,9 @@ $i=1;
                              <td><center><?php echo $i++.'        '; ?></center></td>
                                                          <td><img src="
            <?php
+
+           if($row2[0]==$_SESSION["fb_id"])
+           $_SESSION['varname'] = $i-1;
 
 
            echo $row2["6"];
@@ -149,9 +153,19 @@ $i=1;
 
        <?php
 
-    require("footer.php");
+    require("footer2.php");
 
  ?>
     <script src="js/material.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80262297-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
                           </body>
                         </html>

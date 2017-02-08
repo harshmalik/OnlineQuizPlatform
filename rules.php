@@ -44,7 +44,7 @@ error_reporting(0);
           <div class="android-navigation-container">
             <nav class="android-navigation mdl-navigation">
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="http://cryptex2017.ml/index.php">Home</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" target="_blank" href="https://www.facebook.com/phoenix.cryptex/app/202980683107053/">Forum</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" target="_blank" href="https://www.facebook.com/cryptex2017/app/202980683107053">Forum</a>
 
 
             </nav>
@@ -92,7 +92,7 @@ error_reporting(0);
           <center><font color = "red" size = "180%"> Rules </font></center>
           </br></br>
 
-          <p style = "margin-left:20px;"> The game consists of <span id = "num">32+</span>
+          <p style = "margin-left:20px;"> The game consists of <span id = "num">20+</span>
           levels in total. Each level presents you with a “code” and a set of clues.
           You need to crack that code using those clues to get to the next level.
           The hints,if present, may or may not be hidden at any level. Look for them in url,
@@ -109,7 +109,7 @@ error_reporting(0);
           Note that each lifeline can be used ONLY ONCE...so use wisely..!</br>
 
           Hints will be available in the <u>
-          <a href="https://www.facebook.com/phoenix.cryptex/app_202980683107053" target="_blank">Discussion Forum</a></u>
+          <a href="https://www.facebook.com/cryptex2017/app/202980683107053" target="_blank">Discussion Forum</a></u>
           on a timely basis from the mods. <br>Users can also post the hints for others to keep the game
           going but anyone disclosing the answer will be <font color = "red">disqualified</font>
           from the game.
@@ -151,5 +151,15 @@ error_reporting(0);
     </div>
 
     <script src="js/material.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80262297-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
   </body>
 </html>

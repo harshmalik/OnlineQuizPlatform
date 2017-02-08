@@ -57,7 +57,7 @@ if (!isset($_SESSION["email"])){
           <div class="android-navigation-container">
             <nav class="android-navigation mdl-navigation">
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="http://cryptex2017.ml/index.php">Home</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" target="_blank" href="https://www.facebook.com/phoenix.cryptex/app/202980683107053/">Forum</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" target="_blank" href="https://www.facebook.com/cryptex2017/app/202980683107053/">Forum</a>
 
 
             </nav>
@@ -331,5 +331,15 @@ frameborder="0" allowFullScreen></iframe></div>';
     </div>
 
    <script src="js/material.js"></script>
+   <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80262297-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
   </body>
 </html>

@@ -15,7 +15,7 @@ if (!isset($_SESSION["email"])) {
 }
 $answer = strtolower(trim($_POST["answer"]));
 print_r($answer);
-$answer = str_replace(' ','',$answer);
+//$answer = str_replace(' ','',$answer);
 echo "$answer";
 $answer=sha1($answer);
 //echo "$answer";
